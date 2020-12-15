@@ -4,6 +4,8 @@ Here's the Lambda code in Python. An IAM role needs to created to give lambda ac
 
 # working lambda function for calculating the size of S3 bucket. Requires IAM role access to S3.
 
+
+
 import boto3
 import botocore
 import json
@@ -11,7 +13,7 @@ import json
 print('loading function...')
 
 def lambda_handler(event, context):
-    # access bucket, calculate total size
+    // access bucket, calculate total size
     s3 = boto3.resource('s3')
     bucket = s3.Bucket(event['queryStringParameters']['bucket'])
     total_bytes = 0

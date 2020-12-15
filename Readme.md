@@ -20,11 +20,11 @@ def lambda_handler(event, context):
         total_bytes += key.size
     bucket_size = total_bytes * bytes_to_mb
    
-    # app response
+    // app response
     app_response = {}
     app_response['bucket_size'] = 'total size of folder is ' + str(bucket_size) + '.'
    
-    # response object
+    // response object
     responseObject = {}
     responseObject['statusCode'] = 200
     responseObject['headers'] = {}

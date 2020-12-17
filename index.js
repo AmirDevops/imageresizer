@@ -21,17 +21,17 @@ exports.handler = async (event, context, callback) => {
 
     // Infer the image type from the file suffix.
     const typeMatch = srcKey.match(/\.([^.]*)$/);
-    if (!typeMatch) {
-        console.log("Could not determine the image type.");
-        return;
-    }
+//    if (!typeMatch) {
+//        console.log("Could not determine the image type.");
+//        return;
+//    }
 
     // Check that the image type is supported  
     const imageType = typeMatch[1].toLowerCase();
-    if (imageType != "jpg" && imageType != "png") {
-        console.log(`Unsupported image type: ${imageType}`);
-        return;
-    }
+//    if (imageType != "jpg" && imageType != "png") {
+//        console.log(`Unsupported image type: ${imageType}`);
+//        return;
+//    }
 
     // Download the image from the S3 source bucket. 
 
